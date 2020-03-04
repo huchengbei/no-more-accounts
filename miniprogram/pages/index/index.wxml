@@ -1,2 +1,26 @@
-<!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<!--index.wxml-->
+<view class="container">
+
+  <!-- 操作数据库 -->
+  <view class="uploader">
+    <navigator url="../databaseGuide/databaseGuide" open-type="navigate" class="uploader-text">
+      <text>邮箱</text>
+    </navigator>
+  </view>
+
+  <!-- 即时通信 -->
+  <view class="uploader">
+    <navigator url="../im/im" open-type="navigate" class="uploader-text">
+      <text>手机</text>
+    </navigator>
+  </view>
+
+  <view wx:for="{{more_accounts}}">
+   <view class="uploader">
+    <navigator url="../im/im" open-type="navigate" class="uploader-text">
+      <text> {{item}}</text>
+    </navigator>
+  </view>
+  </view>
+
+</view>
